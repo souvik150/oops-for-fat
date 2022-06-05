@@ -18,6 +18,7 @@ struct book
      int  b_no;
      char b_name[40];
      char b_author[40];
+     char b_title[40];
      int  no_pages;
 };
 int main()
@@ -52,6 +53,8 @@ int main()
                  scanf("%d",&b[i].b_no);
                  printf("Book Name          : ");
                  scanf("%s",b[i].b_name);
+                 printf("Book Title          : ");
+                 scanf("%s",b[i].b_title);
                  printf("Enter Author Name  : ");
                  scanf("%s",b[i].b_author);
                  printf("Enter No. of Pages : ");
@@ -105,8 +108,8 @@ int main()
             printf("-----------------------------------------\n");
             break;
 // Step 7 : Code to exit  
-          case 5 :
-            exit(0);
+            case 5 :
+                    exit(0);
           }
      }while(ch != 5);
      return 0;
