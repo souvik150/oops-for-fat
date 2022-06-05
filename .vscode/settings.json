@@ -1,6 +1,9 @@
 {
   "files.associations": {
     "iostream": "cpp",
-    "conio.h": "c"
+    "conio.h": "c",
+    "bitset": "c",
+    "chrono": "c",
+    "algorithm": "c"
   }
 }

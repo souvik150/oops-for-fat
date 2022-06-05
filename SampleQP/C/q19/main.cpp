@@ -11,7 +11,6 @@ int main()
   cout << "Enter names :" << endl;
 
   for (int i = 0; i < 3; i++) // run the loop till 3 and take into inputs
-
   {
     getline(cin, str[i]);
   }
