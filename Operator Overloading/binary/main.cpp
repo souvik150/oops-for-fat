@@ -1,32 +1,49 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
-class Vit
+class overloading
 {
-  int a;
+  int value;
 
 public:
-  Vit()
+  void setValue(int temp)
   {
-    a = 10;
+    value = temp;
   }
 
-  void operator--()
+  overloading operator+(overloading ob)
   {
-    --a;
+    overloading t;
+    t.value = value + ob.value;
+    return (t);
   }
 
   void display()
   {
-    cout << a << endl;
+    cout << value << endl;
   }
 };
 
 int main()
 {
-  Vit c1;
+  overloading obj1, obj2, result;
+  int a, b;
 
-  c1.display();
-  --c1;
-  c1.display();
+  cout << "Enter the value of Numbers a,b:";
+  cin >> a >> b;
+  obj1.setValue(a);
+  obj2.setValue(b);
+
+  result = obj1 + obj2;
+
+  cout << "Input Values:\n";
+  obj1.display();
+  obj2.display();
+
+  cout << "Result:";
+  result.display();
+
+  getch();
+  return 0;
 }

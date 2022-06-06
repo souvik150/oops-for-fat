@@ -25,9 +25,15 @@ int main()
 {
   Counter c1, c2;
 
+  cout << c1.get_count() << endl;
+
   ++c1;
   ++c2;
+
+  cout << c2.get_count() << endl;
+
   ++c2;
+  cout << c2.get_count() << endl;
 
   return 0;
 }
