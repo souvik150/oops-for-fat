@@ -4,7 +4,6 @@ using namespace std;
 
 int totalFruits = 0;
 
-// Parent Classes
 class Fruit
 {
 private:
