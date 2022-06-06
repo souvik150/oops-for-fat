@@ -1,62 +1,76 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 
+int totalFruits = 0;
+
+// Parent Classes
 class Fruit
 {
-public:
-  static int fruitCounter;
-  Fruit()
-  {
-    fruitCounter++;
-  }
-  ~Fruit()
-  {
-    fruitCounter--;
-  }
-};
+private:
+  int nFruits = 0;
 
-class Apples : public Fruit
-{
 public:
-  static int applesCounter;
-  Apples() : Fruit()
+  void setNumOfFruits(int nFruits)
   {
-    applesCounter++;
+    this->nFruits = nFruits;
   }
-  ~Apples()
+  void display(string fruitname)
   {
-    applesCounter--;
+    cout << "\nTotal No. of " << fruitname << " are " << nFruits;
   }
 };
 
 class Mangoes : public Fruit
 {
+private:
+  int nMango;
+
 public:
-  static int mangoesCounter;
-  Mangoes() : Fruit()
+  void setNumOFMangoes(int nMango)
   {
-    mangoesCounter++;
-  }
-  ~Mangoes()
-  {
-    mangoesCounter--;
+    this->nMango = nMango;
+    totalFruits += nMango;
+
+    setNumOfFruits(nMango);
   }
 };
 
-int Fruit::fruitCounter = 0;
-int Apples::applesCounter = 0;
-int Mangoes::mangoesCounter = 0;
+class Apples : public Fruit
+{
+private:
+  int nApple;
+
+public:
+  void setNumOfApples(int nApple)
+  {
+    this->nApple = nApple;
+    totalFruits += nApple;
+
+    setNumOfFruits(nApple);
+  }
+};
 
 int main()
 {
-  Apples firstApple, secondApple, thirdApple;
-  Mangoes firstMango, secondMango, thirdMango, fourthMango;
 
-  cout << "Total number of fruits: " << Fruit::fruitCounter << endl;
+  Fruit f;
+  Mangoes m;
+  Apples a;
 
-  cout << "Number of apples: " << Apples::applesCounter << endl;
+  int amount;
 
-  cout << "Number of mangoes: " << Mangoes::mangoesCounter << endl;
+  cout << "Total number of apples : ";
+  cin >> amount;
+  a.setNumOfApples(amount);
+
+  cout << "Total number of Mangoes : ";
+  cin >> amount;
+  m.setNumOFMangoes(amount);
+
+  a.display("apples");
+  m.display("Mangoes");
+  cout << "\nTotal No. of Fruits are " << totalFruits;
 
   return 0;
 }
