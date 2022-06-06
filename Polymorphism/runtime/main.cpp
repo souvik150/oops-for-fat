@@ -1,5 +1,7 @@
 // Concept if virtual is present only then the function will get overridden else it won't.
 
+// If we add virtual then inheritance not there
+
 #include <iostream>
 using namespace std;
 
