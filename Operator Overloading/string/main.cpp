@@ -20,7 +20,7 @@ public:
     cout << "The value of x is: " << x << endl;
   }
 
-  hello operator+(hello &t)
+  hello operator+(hello t)
   {
     hello temp;
     temp.x = x + "_" + t.x;
