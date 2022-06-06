@@ -12,12 +12,11 @@ bool isSymmetric(int mat[][MAX], int N)
 	return true;
 }
 
-// Driver code
 int main()
 {
-	int mat[][MAX] = { { 1, 3, 5 },
-					{ 3, 2, 4 },
-					{ 5, 4, 1 } };
+	int mat[][MAX] = {{1, 3, 5},
+										{3, 2, 4},
+										{5, 4, 1}};
 
 	if (isSymmetric(mat, 3))
 		cout << "Yes";
