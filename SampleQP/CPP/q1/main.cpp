@@ -1,64 +1,33 @@
 #include <iostream>
 using namespace std;
-class Shape
-{
-public:
-  Shape() {}
-  virtual void print()
-  {
-    cout << "\nThis is a shape.";
-  }
-};
-class Polygon : public Shape
-{
-public:
-  Polygon() {}
-  void print()
-  {
-    cout << "\nPolygon is a shape.";
-  }
-};
-
-class Rectangle : public Polygon
-{
-public:
-  Rectangle() {}
-  void print()
-  {
-    cout << "\nRectangle is a Polygon.";
-  }
-};
-
-class Triangle : public Polygon
-{
-public:
-  Triangle() {}
-  void print()
-  {
-    cout << "\nTriangle is a Polygon.";
-  }
-};
-class Square : public Rectangle
-{
-public:
-  Square() {}
-  void print()
-  {
-    cout << "\nSquare is a Rectangle.";
-  }
-};
 
 int main()
 {
-  Shape S;
-  Polygon P;
-  Rectangle R;
-  Triangle T;
-  Square Sq;
-  S.print();
-  P.print();
-  R.print();
-  T.print();
-  Sq.print();
+  int n, temp, new_number = 0, temp1, rev = 0;
+  cin >> n;
+  while (n != 0)
+  {
+    temp = n % 10;
+    n = n / 10;
+    if (temp == 8)
+    {
+      temp = 0;
+    }
+    else if (temp == 9)
+    {
+      temp = 1;
+    }
+    else
+      temp = temp + 2;
+    new_number = new_number * 10 + temp;
+  }
+
+  while (new_number != 0)
+  {
+    temp1 = new_number % 10;
+    new_number = new_number / 10;
+    rev = rev * 10 + temp1;
+  }
+  cout << rev;
   return 0;
 }
