@@ -3,7 +3,7 @@ using namespace std;
 class Shape
 {
 public:
-  virtual void print()
+  void print()
   {
     cout << "\nThis is a shape.";
   }
