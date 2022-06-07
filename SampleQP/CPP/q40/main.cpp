@@ -79,7 +79,7 @@ int main()
     a = p1[i].get_phymarks();
     b = c1[i].get_chemmarks();
     c = m1[i].get_mathmarks();
-    total[i] = total[i] + a + b + c;
+    total[i] = a + b + c;
 
     cout << "\nTotal marks of student " << i + 1 << " : " << total[i] << endl;
   }
