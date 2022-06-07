@@ -60,11 +60,11 @@ int main()
 {
   int n;
   double a, b, c;
-  double total[n];
 
   cout << "Enter the total number of students : " << '\n';
   cin >> n;
 
+  double total[n];
   Marks students[n];
   Physics p1[n];
   Chemistry c1[n];
