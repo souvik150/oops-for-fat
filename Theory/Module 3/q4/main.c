@@ -3,12 +3,30 @@
 
 #include <stdio.h>
 
-struct Time{
+struct time{
   int hour;
   int minute;
   int second;
 };
 
 int main(){
+  struct time t1, t2, t3;
+
+  scanf("%d",&t1.hour);
+  scanf("%d",&t1.minute);
+  scanf("%d",&t1.second);
   
+  scanf("%d",&t2.hour);
+  scanf("%d",&t2.minute);
+  scanf("%d",&t2.second);
+
+  if(t1.hour>t2.hour){
+    t3.hour=t1.hour-t2.hour;
+  } else {
+    t3.hour=t2.hour-t1.hour;
+  }
+
+  printf("%d", t3.hour);
+
+  return 0;
 }
