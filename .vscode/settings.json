@@ -4,6 +4,7 @@
     "conio.h": "c",
     "bitset": "c",
     "chrono": "c",
-    "algorithm": "c"
+    "algorithm": "c",
+    "stdio.h": "c"
   }
 }
