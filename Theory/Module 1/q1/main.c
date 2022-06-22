@@ -17,7 +17,7 @@ int main(){
           }
       }
 
-      // If factors = 0 then prime else not
+        // If factors = 0 then prime else not
       if(factors==0 && current_num!= 1){
         printf("%d ",current_num);
       }

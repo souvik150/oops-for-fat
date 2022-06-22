@@ -47,6 +47,7 @@ int main(){
 
     printf("Multiplication of matrix\n");
 
+
     for(int i=0; i<rows; i++){
       for(int j=0; j<cols1; j++){
         int sum=0;
@@ -67,4 +68,4 @@ int main(){
     }
     
     return 0;
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

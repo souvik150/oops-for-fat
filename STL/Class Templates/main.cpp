@@ -23,13 +23,13 @@ public:
 
 int main()
 {
-  Vit<int, int>obj1(2,3);
-  Vit<float, float>obj2(2.4, 3.4);
-  Vit<int, float>obj3(2, 3.4);
+  Vit<int, int> obj1(2, 3);
+  Vit<float, float> obj2(2.4, 3.4);
+  Vit<int, float> obj3(2, 3.4);
 
-  cout<<obj1.add()<<endl;
-  cout<<obj2.add()<<endl;
-  cout<<obj3.add()<<endl;
-  
+  cout << obj1.add() << endl;
+  cout << obj2.add() << endl;
+  cout << obj3.add() << endl;
+
   return 0;
 }
